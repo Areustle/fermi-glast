@@ -40,7 +40,6 @@ HD_SUBDIRS              = embed_python \
                           periodSearch \
                           pulsePhase \
                           bin.perl \
-                          ModelEditor \
                           pyBurstAnalysisGUI \
                           pyExposure \
                           pyLikelihood \
@@ -78,7 +77,7 @@ HD_TEST_SUBDIRS         = embed_python \
                           periodSearch \
                           pulsePhase \
                           test-scripts
-                          
+
 ROOT_DEPENDANT			= evtUtils \
 				  fitsGen \
 				  observationSim
@@ -115,7 +114,7 @@ subdir:
 	if [ "x${BUILD_WITHOUT_ROOT}" != "xyes" -o `echo ${ROOT_DEPENDANT} | grep -c $$exclude` -eq 0 -o `echo "observationSim/pfiles" | grep -xc ${HD_SUBDIR}` -eq 1 ]; then \
 	  ${HD_MAKE} ${HD_TARG_PFX}subdir; \
 	fi
-	
+
 # Install BUILD_DIR; tap dance needed because the built tools live in BUILD_DIR
 #------------------------------------------------------------------------------
 install-BUILD_DIR:
